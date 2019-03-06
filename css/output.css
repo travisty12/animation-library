@@ -1,0 +1,150 @@
+body {
+  background-image: url(../img/subway.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+
+.orbit {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 100px; }
+  .orbit .sun {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: url(../img/lemon.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: shine 5s linear forwards infinite; }
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100px); }
+  50% {
+    transform: translate(45vw, -100px); }
+  100% {
+    transform: translateX(calc(100vw + 100px)); } }
+.swim {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+  height: 400px; }
+  .swim .jelly {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+#jell1 {
+  background-image: url(../img/jelly1.png);
+  animation: shine 8s linear forwards infinite;
+  animation-direction: reverse; }
+
+#jell2 {
+  background-image: url(../img/jelly2.png);
+  animation: shine 6s linear forwards infinite;
+  animation-direction: reverse; }
+
+#jell3 {
+  background-image: url(../img/jelly3.png);
+  animation: shine 7s linear forwards infinite;
+  animation-direction: reverse; }
+
+#jell4 {
+  background-image: url(../img/jelly4.png);
+  animation: shine 9s linear forwards infinite;
+  animation-direction: reverse; }
+
+.garden {
+  top: 927px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.flower {
+  height: 500px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+@keyframes grow1 {
+  from {
+    transform: translateY(927px); }
+  to {
+    transform: translateY(calc(927px - 400px)); } }
+@keyframes grow2 {
+  from {
+    transform: translateY(927px); }
+  to {
+    transform: translateY(calc(927px - 100px)); } }
+@keyframes grow3 {
+  from {
+    transform: translateY(927px); }
+  to {
+    transform: translateY(calc(927px - 200px)); } }
+@keyframes grow4 {
+  from {
+    transform: translateY(927px); }
+  to {
+    transform: translateY(calc(927px - 300px)); } }
+#first {
+  animation: grow1 2s linear forwards infinite;
+  animation-direction: alternate; }
+  #first .bulb {
+    background-image: url(../img/littleboy.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; }
+
+#second {
+  animation: grow2 1s linear forwards infinite;
+  animation-direction: alternate; }
+  #second .bulb {
+    background-image: url(../img/iris2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+#third {
+  animation: grow3 2s linear forwards infinite;
+  animation-direction: alternate; }
+  #third .bulb {
+    background-image: url(../img/eye2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+#fourth {
+  animation: grow4 1.5s linear forwards infinite;
+  animation-direction: alternate; }
+  #fourth .bulb {
+    background-image: url(../img/lips.gif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent; }
+
+.bulb {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white; }
+
+.stem {
+  height: 450px;
+  width: 5px;
+  background-color: green; }
+
+/*# sourceMappingURL=output.css.map */

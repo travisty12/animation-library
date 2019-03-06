@@ -1,0 +1,68 @@
+body {
+  background-color: skyblue;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.garden {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.grass {
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: lightgreen;
+  z-index: 1;
+}
+
+.flower {
+  height: 300px;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#first {
+  animation: grow 5s linear forwards;
+}
+
+#second {
+  animation: grow 10s linear forwards;
+}
+
+#third {
+  animation: grow 15s linear forwards;
+}
+
+#fourth {
+  animation: grow 2s linear forwards alternate;
+
+}
+
+.bulb {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.stem {
+  height: 250px;
+  width: 5px;
+  background-color: green;
+}
+
+@keyframes grow {
+  0% {transform: translate(0,927px);}
+  100% {transform: translate(0, 727px);}
+}
