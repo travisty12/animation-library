@@ -3,6 +3,10 @@ body {
   // background-repeat: no-repeat;
   // background-size: cover;
   background-color: lightblue;
+  h2 {
+    text-align: center;
+    color: white;
+  }
 }
 .container {
   width: 100%;
@@ -18,15 +22,59 @@ body {
   max-width: 1000px;
   height: 90%;
   max-height: 1000px;
+  h2 {
+    display: none;
+  }
 }
 
-#pascNum {
-  display: flex;
+#example {
+  display: none;
   width: 100%;
   height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#nck {
+  display: none;
+  justify-content: center;
+}
+#leftSide {
+    height: 100%;
+}
+@mixin strike($name,$length) {
+  @keyframes #{$name} {
+    from {
+      width: 0px;
+    }
+    to {
+      width: #{$length};
+    }
+  }
+  animation: $name 1s forwards;
+}
+
+#rightSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#pascNum {
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lineStrike {
+  transform: rotate(-30deg);
+  height: 1px;
+  background-color: red;
+  @include strike(lineStrike1,100px);
 }
 
 #pascComb {
@@ -36,6 +84,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
 }
 
 .combElement {
@@ -60,6 +113,9 @@ body {
     font-size: 32px;
   }
 }
+h1 {
+  color: white;
+}
 
 .row {
   display: flex;
@@ -75,6 +131,40 @@ body {
     }
   }
 }
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
 $n: 10;
 
 @for $i from 0 through $n {
@@ -348,7 +438,7 @@ $n: 10;
   background: yellow;
   opacity: 0.5;
 }
-#tet {
+#tet1 {
   position: absolute;
   top: 32%;
   left: 65%;
